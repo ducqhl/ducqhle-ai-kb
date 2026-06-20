@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --line: rgba(255, 255, 255, 0.04);
+}
+
+/* ---- background: faint editor grid (like a minimap / blueprint) ---- */
+.codegrid {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 110% 80% at 50% 0%, #000 30%, transparent 88%);
+}
+
+/* a single slow scanline for CRT/terminal atmosphere */
+.scanline {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 140px;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(125, 207, 255, 0.04), transparent);
+  animation: scan 9s linear infinite;
+}
+
+body {
+  background:
+    radial-gradient(120% 70% at 50% -10%, #1f2335 0%, transparent 55%),
+    linear-gradient(180deg, #1a1b26 0%, #16161e 100%);
+  background-attachment: fixed;
+}
+
+/* terminal-style selection */
+::selection {
+  background: rgba(187, 154, 247, 0.3);
+  color: #ffffff;
+}
+
+/* thin editor scrollbars */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: #16161e;
+}
+*::-webkit-scrollbar-thumb {
+  background: #2a2f45;
+  border-radius: 6px;
+  border: 2px solid #16161e;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #3b4261;
+}
+
+/* ---- reading surface: a source file, not a parchment ---- */
+.prose-note {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #c0caf5;
+}
+
+/* H1 = the file's top symbol, function-call flavoured */
+.prose-note h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+  color: #c0caf5;
+}
+
+/* H2 = section comment block: "// ELI5" */
+.prose-note h2 {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: lowercase;
+  letter-spacing: 0.05em;
+  color: #7aa2f7;
+  margin: 2rem 0 0.7rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px dashed rgba(122, 162, 247, 0.2);
+}
+.prose-note h2::before {
+  content: "// ";
+  color: #565f89;
+}
+
+.prose-note h3 {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 1.4rem 0 0.4rem;
+  color: #bb9af7;
+}
+.prose-note h3::before {
+  content: "# ";
+  color: #565f89;
+}
+
+.prose-note p { margin: 0.7rem 0; }
+
+/* bullet list = array entries with a leading dash */
+.prose-note ul { margin: 0.6rem 0; padding-left: 1.1rem; list-style: none; }
+.prose-note ul li { position: relative; padding-left: 1.2rem; margin: 0.3rem 0; }
+.prose-note ul li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  color: #7dcfff;
+  font-weight: 700;
+}
+.prose-note ol { margin: 0.6rem 0 0.6rem 1.4rem; }
+.prose-note ol li::marker { color: #ff9e64; font-weight: 600; }
+
+/* blockquote = highlighted comment / callout */
+.prose-note blockquote {
+  margin: 1rem 0;
+  padding: 0.7rem 1rem;
+  border-left: 3px solid #e0af68;
+  background: rgba(224, 175, 104, 0.08);
+  border-radius: 0 6px 6px 0;
+  color: #e0c08a;
+}
+.prose-note blockquote p { margin: 0.2rem 0; }
+
+.prose-note code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.12em 0.4em;
+  border-radius: 4px;
+  border: 1px solid rgba(125, 207, 255, 0.12);
+  color: #7dcfff;
+}
+
+/* code blocks get a fake editor gutter line on the left */
+.prose-note pre {
+  font-family: var(--font-mono);
+  background: #16161e;
+  border: 1px solid #2a2f45;
+  border-left: 3px solid #7aa2f7;
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+.prose-note pre code {
+  background: none;
+  padding: 0;
+  border: 0;
+  color: #c0caf5;
+}
+
+/* wikilinks = symbol references */
+.prose-note a,
+.prose-note .wikilink {
+  color: #7dcfff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(125, 207, 255, 0.35);
+  transition: all 0.12s ease;
+}
+.prose-note a::before,
+.prose-note .wikilink::before {
+  content: "→";
+  margin-right: 0.15em;
+  color: #565f89;
+  font-size: 0.85em;
+}
+.prose-note a:hover,
+.prose-note .wikilink:hover {
+  color: #b4f9ff;
+  border-bottom-color: #b4f9ff;
+}
+.wikilink-dead {
+  color: #565f89;
+  border-bottom: 1px dotted rgba(86, 95, 137, 0.5);
+  cursor: help;
+}
+.wikilink-dead::before {
+  content: "✕";
+  margin-right: 0.15em;
+  color: #f7768e;
+  font-size: 0.8em;
+}
+
+.prose-note strong { color: #e0af68; font-weight: 700; }
+.prose-note em { color: #9ece6a; font-style: normal; }
+.prose-note hr { border: none; border-top: 1px dashed #2a2f45; margin: 1.6rem 0; }
+
+/* ---- Mind Elixir container theming hook ---- */
+.mind-host {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #16161e;
+}
+.mind-host .map-container {
+  font-family: var(--font-mono) !important;
+}

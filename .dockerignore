@@ -1,0 +1,12 @@
+# Build context = vault root. Keep it lean: ship web/ source + topic note folders only.
+**/node_modules
+web/.next
+web/out
+.git
+.gitignore
+.obsidian
+.claude
+.agents
+.claudian
+**/.DS_Store
+*.log

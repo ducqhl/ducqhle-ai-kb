@@ -1,0 +1,13 @@
+# Build + run the Observatory site. Run from the web/ folder:
+#   docker compose up --build -d   → http://localhost:8080
+# Context is the vault root (..) so topic note folders are included at build time.
+services:
+  braino-web:
+    build:
+      context: ..
+      dockerfile: web/Dockerfile
+    image: braino-web:latest
+    container_name: braino-web
+    ports:
+      - "8080:80"
+    restart: unless-stopped

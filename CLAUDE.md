@@ -74,6 +74,7 @@ Keep typos stable once linked (e.g. `LTSM/` not `LSTM/`) — renaming breaks `[[
 | `/academic-research-writer` | IEEE-style references, citations |
 | `/latex-paper-en` | math-heavy notation |
 | `/discover-research` | finding new papers/resources |
+| `/watch-video` | learn from a YouTube video → Recall Stack notes (yt-dlp captions) |
 
 ## When Claude Adds a New AI Topic
 
@@ -89,6 +90,33 @@ Keep typos stable once linked (e.g. `LTSM/` not `LSTM/`) — renaming breaks `[[
 | Folder | Status | Source |
 |---|---|---|
 | `LTSM/` | In progress | Colah's LSTM blog (2015) |
+| `Neural Networks/` | In progress | 3Blue1Brown — "But what is a neural network?" (Deep Learning ch.1) |
+
+## Knowledge Website (`web/`)
+
+Next.js static site that renders all vault notes into a recall-optimized knowledge base
+styled like a **code editor** (Tokyo-Night IDE theme: tab-bar nav, status bar, monospace
+everywhere, `// comment` section headers). It is the publish target at the end of the
+learning workflow.
+
+- **Reads** sibling topic folders (any dir with a `* MOC.md` or `Concepts/`), parsing the
+  Concept-note section headings (`## ELI5`, `## Core Concept`, `## Formula / Code`,
+  `## Connections`, `## Source`, `## Remember`) and `[[wikilinks]]`. Keep headings exact or
+  pages render thin.
+- **Features:** Atlas (topics/concepts as files/modules), Mind Map (Mind Elixir tree —
+  global `/map` + per-topic embed, click a leaf to open the note), Graph (force-graph of
+  wikilinks + per-page backlinks), Review (spaced-repetition, SM-2-lite, localStorage).
+- **Run:** `cd web && npm run dev` (live, http://localhost:3000) · `npm run build` (static
+  export → `web/out/`, host anywhere incl. Vercel).
+- **Docker:** `cd web && docker compose up --build -d` → http://localhost:8080 (multi-stage
+  node-build → nginx serve, ~52 MB). Build context is the vault root so notes bake in;
+  rebuild to publish new notes.
+- **Stack:** Next 14 App Router, TS, Tailwind, JetBrains Mono + Fira Code (coder fonts),
+  `mind-elixir` for mindmaps, `react-force-graph-2d` for the graph. Theme colors are
+  remapped onto the legacy tailwind names (`ink`/`parchment`/`star`/`signal`) in
+  `tailwind.config.ts`. Data layer in `web/lib/notes.ts` (`getMindMap()` builds the tree);
+  no DB — markdown is the source of truth.
+- `web/node_modules`, `.next`, `out` are gitignored.
 
 ## User Preferences
 

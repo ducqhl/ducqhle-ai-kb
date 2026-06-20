@@ -1,0 +1,8 @@
+# Obsidian plugins (large compiled JS)
+.obsidian/plugins/
+
+# Claudian sessions
+.claudian/
+
+# OS
+.DS_Store

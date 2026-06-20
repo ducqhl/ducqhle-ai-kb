@@ -1,0 +1,217 @@
+{
+  "main": {
+    "id": "df7d9ae809b2a425",
+    "type": "split",
+    "children": [
+      {
+        "id": "7a18878ec618a43d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "281754be1237c674",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Tab mới"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "45bc2913e5d4528c",
+    "type": "split",
+    "children": [
+      {
+        "id": "66a811b0c2e3acec",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c4d34a13625a1091",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Tìm kiếm"
+            }
+          },
+          {
+            "id": "b46c909e0c390dbe",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Đánh dấu"
+            }
+          },
+          {
+            "id": "3df78d71b9b93634",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Trình duyệt tệp"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a972850834b8bb28",
+    "type": "split",
+    "children": [
+      {
+        "id": "d18abc0f476ea33f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c1eecaef0d95b48c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2026-05-31.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Liên kết đến của 2026-05-31"
+            }
+          },
+          {
+            "id": "e0c1098e2bb9cff5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "2026-05-31.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Liên kết đi ra từ 2026-05-31"
+            }
+          },
+          {
+            "id": "14145e52047f726f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Thẻ"
+            }
+          },
+          {
+            "id": "967373df57706f59",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Tất cả thuộc tính"
+            }
+          },
+          {
+            "id": "afabe3b74f2421b2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2026-05-31.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Đề cương của 2026-05-31"
+            }
+          },
+          {
+            "id": "4b75069798aa3eae",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 440.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Mở bộ chuyển đổi nhanh": false,
+      "graph:Mở xem biểu đồ": false,
+      "canvas:Tạo bảng mới": false,
+      "daily-notes:Mở ghi chú hôm nay": false,
+      "templates:Chèn mẫu": false,
+      "command-palette:Mở khay lệnh": false,
+      "bases:Tạo cơ sở mới": false,
+      "realclaudian:Open Claudian": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-git:Open Git source control": false,
+      "templater-obsidian:Templater": false,
+      "markdown-importer:Mở trình chuyển đổi Markdown": false,
+      "workspaces:Quản lý cấu trúc khung làm việc": false
+    }
+  },
+  "active": "281754be1237c674",
+  "lastOpenFiles": [
+    "CLAUDE.md",
+    "LTSM/Concepts/05 - Output Gate.md",
+    "LTSM/LSTM Mind Map.excalidraw.md",
+    "LTSM/LSTM MOC.md",
+    "LTSM/Concepts/04 - Input Gate.md",
+    "LTSM/Concepts/03 - Forget Gate.md",
+    "LTSM/Concepts/02 - LSTM Cell Architecture.md",
+    "LTSM/Concepts/01 - The Problem with RNNs.md",
+    "Chưa đặt tên.canvas",
+    "2026-05-31.md",
+    "LTSM/Chưa đặt tên.md",
+    "LTSM",
+    "Chưa đặt tên.base",
+    "Chào mừng.md"
+  ]
+}

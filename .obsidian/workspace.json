@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7a18878ec618a43d",
+        "id": "5594585c68796db4",
         "type": "tabs",
         "children": [
           {
-            "id": "281754be1237c674",
+            "id": "33d4b1a05cb86873",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -191,14 +191,25 @@
       "bases:Tạo cơ sở mới": false,
       "realclaudian:Open Claudian": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false,
       "markdown-importer:Mở trình chuyển đổi Markdown": false,
       "workspaces:Quản lý cấu trúc khung làm việc": false
     }
   },
-  "active": "281754be1237c674",
+  "active": "33d4b1a05cb86873",
   "lastOpenFiles": [
+    "AI Foundations/Concepts/01 - Four Ingredients of Intelligence.md",
+    "AI Foundations/AI Foundations MOC.md",
+    "web/out/concept/weighted-sum/index.txt",
+    "web/out/concept/neuron/index.txt",
+    "web/out/concept/layers/index.txt",
+    "web/out/concept/network-as-a-function/index.txt",
+    "web/out/concept/bias/index.txt",
+    "web/out/concept/activation/index.txt",
+    "web/out/concept/weighted-sum/index.html",
+    "web/out/concept/layers/index.html",
+    "web/out/concept/neuron/index.html",
+    "web/out/concept/network-as-a-function/index.html",
+    "AI Foundations/AI Foundations Mind Map.excalidraw.md",
     "CLAUDE.md",
     "LTSM/Concepts/05 - Output Gate.md",
     "LTSM/LSTM Mind Map.excalidraw.md",
@@ -210,8 +221,6 @@
     "Chưa đặt tên.canvas",
     "2026-05-31.md",
     "LTSM/Chưa đặt tên.md",
-    "LTSM",
-    "Chưa đặt tên.base",
     "Chào mừng.md"
   ]
 }

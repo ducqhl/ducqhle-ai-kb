@@ -40,6 +40,9 @@ Map of Content for the **plain vanilla feedforward neural network** — the simp
 ## Next Up
 - Chapter 2: how the network *learns* the weights and biases from data (gradient descent / backpropagation).
 
+## Broader Context
+- [[AI Foundations MOC]] — where neural nets sit in AI history (see [[Neural AI]]) and the tensor toolkit they run on.
+
 ## Source: But what is a neural network? | Deep learning chapter 1
 - 3Blue1Brown — https://www.youtube.com/watch?v=aircAruvnKk
 - Duration 18:40

@@ -91,6 +91,7 @@ Keep typos stable once linked (e.g. `LTSM/` not `LSTM/`) — renaming breaks `[[
 |---|---|---|
 | `LTSM/` | In progress | Colah's LSTM blog (2015) |
 | `Neural Networks/` | In progress | 3Blue1Brown — "But what is a neural network?" (Deep Learning ch.1) |
+| `AI Foundations/` | In progress | Stanford CS221 Autumn 2025 — Lecture 1 (Percy Liang) |
 
 ## Knowledge Website (`web/`)
 

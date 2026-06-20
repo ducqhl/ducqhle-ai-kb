@@ -16,6 +16,8 @@ The era (last ~5 years) of **foundation models**. Core idea: train on a large bo
 - [[Neural AI]] — the Transformer (2017) is the architecture these scale
 - [[Alignment and Developer Goals]] — alignment is applied to these via post-training
 - [[Societal Impact of AI]] — industrialization raises the societal stakes
+- [[Next-Token Prediction as Intelligence]] — the underrated engine beneath the scale
+- [[Pre-training vs Post-training]] — the two-stage recipe behind these models
 - [[AI Foundations MOC]]
 
 ## Source

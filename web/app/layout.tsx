@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Fira_Code } from "next/font/google";
 import "./globals.css";
+import "katex/dist/katex.min.css";
+import "highlight.js/styles/tokyo-night-dark.css";
 import { NavBar } from "@/components/NavBar";
 import { StatusBar } from "@/components/StatusBar";
 

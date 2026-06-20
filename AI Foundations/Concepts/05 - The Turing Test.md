@@ -13,6 +13,7 @@ Turing deliberately left the *solution* open. He didn't know how to build it (he
 ## Connections
 - [[Symbolic AI]] — one proposed path (logic) toward Turing's goal
 - [[Neural AI]] — the machine-learning path Turing also hinted at
+- [[Science as the New Turing Test]] — Percy's argument that this bar is now outdated
 - [[AI Foundations MOC]]
 
 ## Source

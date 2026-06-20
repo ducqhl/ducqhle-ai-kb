@@ -1,7 +1,24 @@
 import { marked } from "marked";
+import markedKatex from "marked-katex-extension";
+import { markedHighlight } from "marked-highlight";
+import hljs from "highlight.js";
 import { getConcepts, slugify } from "./notes";
 
 marked.setOptions({ gfm: true, breaks: false });
+
+// Syntax-color fenced code blocks (highlight.js). Unknown langs fall back to auto.
+marked.use(
+  markedHighlight({
+    langPrefix: "hljs language-",
+    highlight(code, lang) {
+      const language = lang && hljs.getLanguage(lang) ? lang : "plaintext";
+      return hljs.highlight(code, { language }).value;
+    },
+  })
+);
+
+// Render $inline$ and $$block$$ math with KaTeX at build time.
+marked.use(markedKatex({ throwOnError: false }));
 
 /**
  * Render note markdown to HTML, rewriting [[wikilinks]] into real anchors.

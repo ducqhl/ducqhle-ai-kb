@@ -91,7 +91,7 @@ Keep typos stable once linked (e.g. `LTSM/` not `LSTM/`) — renaming breaks `[[
 |---|---|---|
 | `LTSM/` | In progress | Colah's LSTM blog (2015) |
 | `Neural Networks/` | In progress | 3Blue1Brown — "But what is a neural network?" (Deep Learning ch.1) |
-| `AI Foundations/` | In progress | Stanford CS221 Autumn 2025 — Lecture 1 + Fireside Chat (Percy Liang) |
+| `AI Foundations/` | In progress | Stanford CS221 Autumn 2025 — Lecture 1 + Fireside Chat (Percy Liang) + executable lectures (`backpropagation.py`, `linear_regression.py`) |
 
 ## Knowledge Website (`web/`)
 
